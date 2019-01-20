@@ -4,7 +4,7 @@ LR_file = '/home/jiawei/Documents/polyU/FYP/MDS_MATLAB/data/att_faces/LR_12.txt'
 HR_file = '/home/jiawei/Documents/polyU/FYP/MDS_MATLAB/data/att_faces/HR_36.txt';
 train_no = 3;
 test_no = 10 - train_no;
-NumOfEigenface = 40;
+NumOfEigenface = 7;
 landa = 0.5;
 common_space_dim = 40;
 iteration = 20;
@@ -82,8 +82,8 @@ HR_test_PCA_features = (HR_test_data'*HR_test_eigenface(:,1:NumOfEigenface))';
 LR_test_PCA_features = (LR_test_data'*LR_test_eigenface(:,1:NumOfEigenface))';
 
 %%%%%% transform to common space %%%%%%
-W_LR = W(1:40, :);
-W_HR = W(41:80, :);
+W_LR = W(1:7, :);
+W_HR = W(8:14, :);
 HR_test_mapped = W_LR' * HR_test_PCA_features; % 15 * 280
 LR_test_mapped = W_HR' * LR_test_PCA_features; % 15 * 280
 

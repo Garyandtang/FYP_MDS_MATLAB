@@ -2,8 +2,13 @@ clear;
 %parameter
 HR_path = '/home/jiawei/Documents/polyU/FYP/Couple_mapping_MATLAB/test/HR/';
 LR_path = '/home/jiawei/Documents/polyU/FYP/Couple_mapping_MATLAB/test/LR/';
+<<<<<<< HEAD
 LR_row = 7;
 LR_colom = 7;
+=======
+LR_row = 12;
+LR_colom = 12;
+>>>>>>> 6eb6f9b9138acea875118051db621b9eb9458533
 %create folder for LR images
 if ~exist(LR_path)
     mkdir(LR_path);
